@@ -1,0 +1,120 @@
+.poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav a {
+    font-family: Lato;
+    color: #a5a5a5;
+}
+
+.nav a:hover {
+    color: #474747;
+}
+
+.nav a.active {
+    color: #1e1e1e;
+}
+
+body {
+    font-family: Georgia;
+    display: grid;
+    grid-template-columns: [header-start] 10% 5fr 10% [header-end];
+    grid-template-rows: 60px 60px [header-start] 150px auto 150px [header-end] 20px auto auto;
+    grid-template-areas: 'logo logo logo' 'menu menu menu' '. . .' '. title .' '. author .' '. . .' '. text .' '. quote .';
+    grid-gap: 10px;
+}
+
+@media (min-width:992px) {
+    body {
+        display: grid;
+        grid-template-columns: [header-start] 60px 2fr 65px 5fr 1fr 60px [header-end];
+        grid-template-rows: 90px [header-start] 150px auto 150px [header-end] 20px auto;
+        grid-template-areas: 'logo logo logo menu menu menu' '. . . . . .' '. . . title title .' '. . . author . .' '. . . . . .' '. quote . text . .';
+        grid-gap: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    body {
+        font-family: Georgia;
+        display: grid;
+        grid-template-columns: [header-start] 100px 1fr 65px minmax(400px, 600px) 2fr 100px [header-end];
+        grid-template-rows: 90px [header-start] 200px auto 200px [header-end] 20px auto;
+        grid-template-areas: 'logo logo logo menu menu menu' '. . . . . .' '. . . title title .' '. . . author . .' '. . . . . .' '. quote . text . .';
+        grid-gap: 10px;
+        max-width: 1500px;
+    }
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: header / header / header / header;
+}
+
+.decoration {
+    font-size: 30em;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.33);
+    grid-area: 1 / 2 / header / header;
+}
+
+h1 {
+    color: #ffffff;
+    grid-area: title;
+    font-family: Abril Fatface;
+    font-size: 4em;
+}
+
+.author {
+    color: #ffffff;
+    align-self: flex-end;
+    grid-area: author;
+}
+
+.text {
+    grid-area: text;
+}
+
+.quote {
+    grid-area: quote;
+}
+
+.menu {
+    justify-content: flex-end;
+    grid-area: menu;
+    align-self: center;
+}
+
+.logo {
+    grid-area: logo;
+    font-family: Lato;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1;
+    color: #5b5b5b;
+    margin-left: 20px;
+    align-self: center;
+}
+
+.nogrid .decoration {
+    display: none !important;
+}
+
+.nogrid h1 {
+    color: #3b3b3b;
+}
+
+.nogrid body {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 800px;
+    padding-top: 10px;
+}
+
+.nogrid .logo {
+    margin-left: 0;
+}
