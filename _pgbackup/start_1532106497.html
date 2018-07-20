@@ -14,9 +14,9 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
 	</head>
-	<body style="     font-family: Georgia;display:grid;grid-template-columns:[header-start] 65px 2fr 65px 5fr 1fr 100px [header-end];grid-template-rows:80px [header-start] 100px auto 150px [header-end] 25px auto;grid-template-areas:'logo logo logo menu menu .' '. . . . . .' '. . . title title .' '. . . author . .' '. . . . . .' '. blockquote . text . .';grid-gap:10px;">
-		<img src="images/pine.sky.jpg" class="img-fluid header-image" style=" width: 100%; height: 100%; object-fit: cover;grid-area:header / header / header / header;">
-		<h1 style="grid-area: title; font-family: Abril Fatface; letter-spacing: 2px; font-size: 4em;" class="text-white">Summer Nights,<br>Fragrant Pines</h1>
+	<body style="  display:grid;grid-template-columns:[header-start] 100px 1fr 65px 1fr 1fr 100px [header-end];grid-template-rows:100px auto 150px auto;grid-template-areas:'. . . . . .' '. . . title title .' '. . . author . .' '. blockquote . text text .';grid-gap:10px;">
+		<img src="images/pine.sky.jpg" class="img-fluid header-image" style=" width: 100%; height: 100%; object-fit: cover;grid-area:1 / 1 / 4 / 7;">
+		<h1 style="grid-area:title;" class="text-white">Summer Nights,<br>Fragrant Pines</h1>
 		<p class="author text-white" style="grid-area:author;">By Barry Forestlight</p>
 		<div class="text" style="grid-area:text;">
 			<p class="text-body">Pines are special. They're some of the oldest leaving beings on Earth. Did you know some Pine trees are more than 5000 years old - and still growing today?</p>
@@ -30,18 +30,6 @@
 			<p class="mb-0">We love Pine trees! They're beautiful, strong and they smell great.</p> 
 			<footer class="blockquote-footer">Mr. Pine Cone</footer>			 
 		</blockquote>
-		<a class="logo" style="grid-area: logo; font-family: Lato; font-size: 32px; text-transform: uppercase; letter-spacing: 2px; color: #a6a1a1; font-weight: 500; margin-left: 22px; padding-top: 0px; align-self: center;">The Pine Poems</a>
-		<ul class="nav" style="justify-content: flex-end; grid-area: menu; align-self: center;">
-			<li class="nav-item"> 
-				<a class="nav-link active" href="#">Home</a> 
-			</li>			 
-			<li class="nav-item">
-				<a class="nav-link" href="#">New</a> 
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Competition</a>
-			</li>
-		</ul>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/popper.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
